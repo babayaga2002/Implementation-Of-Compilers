@@ -1,0 +1,67 @@
+========================================================================================================================
+|		TAC Translation		|
+  0. :t000	=	& z
+  1. :param	t000
+  2. :t001	=	call readInt, 1
+  3. :x	=	t001 
+  4. :t002	=	& z
+  5. :param	t002
+  6. :t003	=	call readInt, 1
+  7. :y	=	t003 
+  8. :t004	=	x + y
+  9. :z	=	t004 
+ 10. :param	x
+ 11. :t005	=	call printInt, 1
+ 12. :param	_0
+ 13. :t006	=	call printStr, 1
+ 14. :param	y
+ 15. :t007	=	call printInt, 1
+ 16. :param	_1
+ 17. :t008	=	call printStr, 1
+ 18. :param	z
+ 19. :t009	=	call printInt, 1
+ 20. :t010	=	0 
+ 21. :return	t010
+========================================================================================================================
+
+
+========================================================================================================================
+|		Symbol Tables		|
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Symbol Table : Global
+Offset = 0
+Start Quad Index = 0
+End Quad Index =  0
+Name           Value     var_type  size      Offset    Type      
+printStr       Null      func      0         -1        ptr-to-St( Global )INT 
+printInt       Null      func      0         -1        ptr-to-St( Global )INT 
+readInt        Null      func      0         -1        ptr-to-St( Global )INT 
+main           Null      func      0         -1        ptr-to-St( main )INT 
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+========================================================================================================================
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Symbol Table : main
+Offset = -56
+Start Quad Index = 0
+End Quad Index =  21
+Name           Value     var_type  size      Offset    Type      
+retVal         Null      return    4         0         INT 
+x              Null      local     4         -4        INT 
+y              Null      local     4         -8        INT 
+z              Null      local     4         -12       INT 
+t000           Null      temp      4         -16       ptr(INT )
+t001           Null      temp      4         -20       INT 
+t002           Null      temp      4         -24       ptr(INT )
+t003           Null      temp      4         -28       INT 
+t004           Null      temp      4         -32       INT 
+t005           Null      temp      4         -36       INT 
+t006           Null      temp      4         -40       INT 
+t007           Null      temp      4         -44       INT 
+t008           Null      temp      4         -48       INT 
+t009           Null      temp      4         -52       INT 
+t010           0         temp      4         -56       INT 
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

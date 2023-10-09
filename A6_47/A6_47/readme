@@ -1,0 +1,9 @@
+To run the compiler execute the commands
+ make
+ make run
+
+To clean the folder exceute the commands
+ make clean
+
+To run individual files
+ ./test<number>

@@ -1,0 +1,5 @@
+To run the compiler execute the commands
+ make
+
+To clean the folder exceute the commands
+ make clean

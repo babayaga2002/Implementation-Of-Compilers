@@ -1,0 +1,85 @@
+========================================================================================================================
+|		TAC Translation		|
+  0. :t000	=	0 
+  1. :if  n ==t000	goto  3
+  2. :goto 6
+  3. :t001	=	1 
+  4. :return	t001
+  5. :goto -1
+  6. :t002	=	1 
+  7. :t003	=	n - t002
+  8. :param	t003
+  9. :t004	=	call factorial, 1
+ 10. :t005	=	n * t004
+ 11. :return	t005
+ 12. :t006	=	& r
+ 13. :param	t006
+ 14. :t007	=	call readInt, 1
+ 15. :n	=	t007 
+ 16. :param	n
+ 17. :t008	=	call factorial, 1
+ 18. :r	=	t008 
+ 19. :param	n
+ 20. :t009	=	call printInt, 1
+ 21. :param	_0
+ 22. :t010	=	call printStr, 1
+ 23. :param	r
+ 24. :t011	=	call printInt, 1
+ 25. :t012	=	0 
+ 26. :return	t012
+========================================================================================================================
+
+
+========================================================================================================================
+|		Symbol Tables		|
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Symbol Table : Global
+Offset = 0
+Start Quad Index = 0
+End Quad Index =  0
+Name           Value     var_type  size      Offset    Type      
+printStr       Null      func      0         -1        ptr-to-St( Global )INT 
+printInt       Null      func      0         -1        ptr-to-St( Global )INT 
+readInt        Null      func      0         -1        ptr-to-St( Global )INT 
+factorial      Null      func      0         -1        ptr-to-St( factorial )INT 
+main           Null      func      0         -1        ptr-to-St( main )INT 
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+========================================================================================================================
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Symbol Table : factorial
+Offset = -28
+Start Quad Index = 0
+End Quad Index =  11
+Name           Value     var_type  size      Offset    Type      
+retVal         Null      return    4         0         INT 
+n              Null      param     4         -4        INT 
+t000           0         temp      4         -8        INT 
+t001           1         temp      4         -12       INT 
+t002           1         temp      4         -16       INT 
+t003           Null      temp      4         -20       INT 
+t004           Null      temp      4         -24       INT 
+t005           Null      temp      4         -28       INT 
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Symbol Table : main
+Offset = -36
+Start Quad Index = 12
+End Quad Index =  26
+Name           Value     var_type  size      Offset    Type      
+retVal         Null      return    4         0         INT 
+n              Null      local     4         -4        INT 
+r              Null      local     4         -8        INT 
+t006           Null      temp      4         -12       ptr(INT )
+t007           Null      temp      4         -16       INT 
+t008           Null      temp      4         -20       INT 
+t009           Null      temp      4         -24       INT 
+t010           Null      temp      4         -28       INT 
+t011           Null      temp      4         -32       INT 
+t012           0         temp      4         -36       INT 
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

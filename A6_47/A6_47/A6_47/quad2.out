@@ -1,0 +1,139 @@
+========================================================================================================================
+|		TAC Translation		|
+  0. :t000	=	& temp
+  1. :param	t000
+  2. :t001	=	call readInt, 1
+  3. :n	=	t001 
+  4. :t002	=	0 
+  5. :i	=	t002 
+  6. :if  i <n	goto  13
+  7. :goto 20
+  8. :goto 20
+  9. :t003	=	1 
+ 10. :t004	=	i + t003
+ 11. :i	=	t004 
+ 12. :goto 6
+ 13. :t005	=	& temp
+ 14. :param	t005
+ 15. :t006	=	call readInt, 1
+ 16. :m	=	t006 
+ 17. :t007	=	i * 4
+ 18. :a[t007]	=	m
+ 19. :goto 9
+ 20. :t008	=	0 
+ 21. :t009	=	t008 * 4
+ 22. :t010	=	a[t009]
+ 23. :m	=	t010 
+ 24. :t011	=	1 
+ 25. :i	=	t011 
+ 26. :if  i <n	goto  33
+ 27. :goto 41
+ 28. :goto 41
+ 29. :t012	=	1 
+ 30. :t013	=	i + t012
+ 31. :i	=	t013 
+ 32. :goto 26
+ 33. :t014	=	i * 4
+ 34. :t015	=	a[t014]
+ 35. :if  t015 >m	goto  37
+ 36. :goto 29
+ 37. :t016	=	i * 4
+ 38. :t017	=	a[t016]
+ 39. :m	=	t017 
+ 40. :goto 29
+ 41. :param	_0
+ 42. :t018	=	call printStr, 1
+ 43. :t019	=	0 
+ 44. :t020	=	t019 * 4
+ 45. :t021	=	a[t020]
+ 46. :param	t021
+ 47. :t022	=	call printInt, 1
+ 48. :t023	=	1 
+ 49. :i	=	t023 
+ 50. :if  i <n	goto  57
+ 51. :goto 64
+ 52. :goto 64
+ 53. :t024	=	1 
+ 54. :t025	=	i + t024
+ 55. :i	=	t025 
+ 56. :goto 50
+ 57. :param	_1
+ 58. :t026	=	call printStr, 1
+ 59. :t027	=	i * 4
+ 60. :t028	=	a[t027]
+ 61. :param	t028
+ 62. :t029	=	call printInt, 1
+ 63. :goto 53
+ 64. :param	_2
+ 65. :t030	=	call printStr, 1
+ 66. :param	m
+ 67. :t031	=	call printInt, 1
+ 68. :t032	=	0 
+ 69. :return	t032
+========================================================================================================================
+
+
+========================================================================================================================
+|		Symbol Tables		|
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Symbol Table : Global
+Offset = 0
+Start Quad Index = 0
+End Quad Index =  0
+Name           Value     var_type  size      Offset    Type      
+printStr       Null      func      0         -1        ptr-to-St( Global )INT 
+printInt       Null      func      0         -1        ptr-to-St( Global )INT 
+readInt        Null      func      0         -1        ptr-to-St( Global )INT 
+main           Null      func      0         -1        ptr-to-St( main )INT 
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+========================================================================================================================
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Symbol Table : main
+Offset = -188
+Start Quad Index = 0
+End Quad Index =  69
+Name           Value     var_type  size      Offset    Type      
+retVal         Null      return    4         0         INT 
+temp           Null      local     4         -4        INT 
+n              Null      local     4         -8        INT 
+a              Null      local     40        -48       array(10, INT )
+m              Null      local     4         -52       INT 
+i              Null      local     4         -56       INT 
+t000           Null      temp      4         -60       ptr(INT )
+t001           Null      temp      4         -64       INT 
+t002           0         temp      4         -68       INT 
+t003           1         temp      4         -72       INT 
+t004           Null      temp      4         -76       INT 
+t005           Null      temp      4         -80       ptr(INT )
+t006           Null      temp      4         -84       INT 
+t007           Null      temp      4         -88       INT 
+t008           0         temp      4         -92       INT 
+t009           Null      temp      4         -96       INT 
+t010           Null      temp      4         -100      INT 
+t011           1         temp      4         -104      INT 
+t012           1         temp      4         -108      INT 
+t013           Null      temp      4         -112      INT 
+t014           Null      temp      4         -116      INT 
+t015           Null      temp      4         -120      INT 
+t016           Null      temp      4         -124      INT 
+t017           Null      temp      4         -128      INT 
+t018           Null      temp      4         -132      INT 
+t019           0         temp      4         -136      INT 
+t020           Null      temp      4         -140      INT 
+t021           Null      temp      4         -144      INT 
+t022           Null      temp      4         -148      INT 
+t023           1         temp      4         -152      INT 
+t024           1         temp      4         -156      INT 
+t025           Null      temp      4         -160      INT 
+t026           Null      temp      4         -164      INT 
+t027           Null      temp      4         -168      INT 
+t028           Null      temp      4         -172      INT 
+t029           Null      temp      4         -176      INT 
+t030           Null      temp      4         -180      INT 
+t031           Null      temp      4         -184      INT 
+t032           0         temp      4         -188      INT 
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
